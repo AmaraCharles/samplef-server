@@ -1,11 +1,11 @@
-// email.service.ts (Ethergalleries)
+// email.service.ts (Blocktoart)
 // Resend-based implementation (same pattern as Bullagetrade)
 
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "");
-const FROM_EMAIL ="support@ethergalleries.com"
-  // process.env.FROM_EMAIL || "Ethergalleries <support@ethergalleries.com>";
+const FROM_EMAIL ="support@Blocktoart.com"
+  // process.env.FROM_EMAIL || "Blocktoart <support@Blocktoart.com>";
 
 // ----------------------------
 // Generic send helper
@@ -46,7 +46,7 @@ export async function sendVerificationEmail(
 ) {
   return sendEmail({
     to,
-    subject: "Verify Your Ethergalleries Account",
+    subject: "Verify Your Blocktoart Account",
     html: `
       <div style="font-family: 'Inter', sans-serif; max-width:600px; margin:0 auto; padding:40px; background-color:#ffffff;">
   <!-- Header -->
@@ -64,7 +64,7 @@ export async function sendVerificationEmail(
 
     <!-- Instruction -->
     <p style="font-size:16px; color:#4b5563; margin-bottom:24px; line-height:1.6;">
-      Thank you for joining <strong>Ethergalleries</strong> — your gateway to discovering, collecting, and trading unique digital art and NFTs. We are excited to have you on board and look forward to helping you explore the world of blockchain collectibles.
+      Thank you for joining <strong>Blocktoart</strong> — your gateway to discovering, collecting, and trading unique digital art and NFTs. We are excited to have you on board and look forward to helping you explore the world of blockchain collectibles.
     </p>
     
     <p style="font-size:16px; color:#4b5563; margin-bottom:24px; line-height:1.6;">
@@ -83,17 +83,17 @@ export async function sendVerificationEmail(
 
     <!-- Closing Remark -->
     <p style="font-size:16px; color:#4b5563; margin-top:24px; line-height:1.6;">
-      Once verified, you can start exploring the Ethergalleries marketplace, connect with other collectors, and experience the exciting world of digital art. If you have any questions, our support team is here to assist you.
+      Once verified, you can start exploring the Blocktoart marketplace, connect with other collectors, and experience the exciting world of digital art. If you have any questions, our support team is here to assist you.
     </p>
 
     <p style="font-size:16px; color:#4b5563; margin-top:12px; line-height:1.6;">
-      Welcome again to the Ethergalleries community — where art meets innovation.
+      Welcome again to the Blocktoart community — where art meets innovation.
     </p>
   </div>
 
   <!-- Footer -->
   <p style="text-align:center; font-size:12px; color:#9ca3af; margin-top:24px;">
-    If you did not create an account with Ethergalleries, please ignore this email.
+    If you did not create an account with Blocktoart, please ignore this email.
   </p>
 </div>
 
@@ -104,7 +104,7 @@ export async function sendVerificationEmail(
 export async function sendPasswordResetEmail(to: string, code: string) {
   return sendEmail({
     to,
-    subject: "Reset Your Ethergalleries Password",
+    subject: "Reset Your Blocktoart Password",
     html: `
       <div style="font-family:Inter,sans-serif;max-width:600px;margin:auto;padding:40px">
         <h1 style="text-align:center">Ether<span style="color:#ef4444">galleries</span></h1>
@@ -181,7 +181,7 @@ export async function sendDepositApprovalNotification(
     subject: `Deposit ${approved ? "Approved" : "Rejected"}`,
     html: `
       <div style="font-family:Inter,sans-serif;max-width:600px;margin:auto;padding:40px">
-        <h1 style="text-align:center">Ethergalleries</h1>
+        <h1 style="text-align:center">Blocktoart</h1>
         <div style="background:${approved ? "#f0fdf4" : "#fef2f2"};
           padding:30px;border-radius:12px;text-align:center">
           <h2>${approved ? "✅ Approved" : "❌ Rejected"}</h2>
@@ -204,7 +204,7 @@ export async function sendWithdrawalApprovalNotification(
     subject: `Withdrawal ${approved ? "Approved" : "Rejected"}`,
     html: `
       <div style="font-family:Inter,sans-serif;max-width:600px;margin:auto;padding:40px">
-        <h1 style="text-align:center">Ethergalleries</h1>
+        <h1 style="text-align:center">Blocktoart</h1>
         <div style="background:${approved ? "#f0fdf4" : "#fef2f2"};
           padding:30px;border-radius:12px;text-align:center">
           <h2>${approved ? "✅ Approved" : "❌ Rejected"}</h2>

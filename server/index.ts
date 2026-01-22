@@ -17,8 +17,8 @@ declare module "http" {
 }
 
 const allowedOrigins = [
-  "https://www.ethergalleries.com",
-  "https://ethergalleries.com",
+  "https://www.Blocktoart.com",
+  "https://Blocktoart.com",
   "https://clentmode.vercel.app",
   "https://blocktoart.com",
   "https://www.blocktoart.com",
@@ -38,8 +38,8 @@ app.use(cors({
 app.set("trust proxy", 1);
 
 app.use(session({
-  name: "ethergalleries.sid",
-  secret: process.env.SESSION_SECRET || 'Ethergalleries-dev-secret-key-2024',
+  name: "Blocktoart.sid",
+  secret: process.env.SESSION_SECRET || 'Blocktoart-dev-secret-key-2024',
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -195,7 +195,7 @@ app.get('*', (req, res) => {
 
 // // Session middleware
 // // app.use(session({
-// //   secret: process.env.SESSION_SECRET || 'Ethergalleries-dev-secret-key-2024',
+// //   secret: process.env.SESSION_SECRET || 'Blocktoart-dev-secret-key-2024',
 // //   resave: false,
 // //   saveUninitialized: false,
 // //   cookie: {

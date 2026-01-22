@@ -522,7 +522,7 @@ export function registerAdminRoutes(app: Express) {
         }
       }
 
-      nft.owner = buyerEmail || 'admin@Ethergalleries.com';
+      nft.owner = buyerEmail || 'admin@Blocktoart.com';
       nft.status = 'owned';
       await nft.save();
 
