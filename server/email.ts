@@ -4,7 +4,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "");
-const FROM_EMAIL ="support@Blocktoart.com"
+const FROM_EMAIL ="support@blocktoart.com"
   // process.env.FROM_EMAIL || "Blocktoart <support@Blocktoart.com>";
 
 // ----------------------------
